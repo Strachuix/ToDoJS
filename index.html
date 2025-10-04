@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja ToDo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista Zadań</h1>
+        </header>
+        
+        <main>
+            <form id="todoForm" class="todo-form">
+                <input type="text" id="todoInput" placeholder="Wprowadź nowe zadanie..." required>
+                <button type="submit">Dodaj</button>
+            </form>
+            
+            <div id="taskCounter" class="task-counter">
+                <span id="counterText">0 zadań • 0 ukończonych</span>
+            </div>
+            
+            <div class="filter-buttons">
+                <button id="filterAll" class="filter-btn active">Wszystkie</button>
+                <button id="filterActive" class="filter-btn">Aktywne</button>
+                <button id="filterCompleted" class="filter-btn">Ukończone</button>
+                <button id="clearCompleted" class="clear-completed">Usuń ukończone</button>
+            </div>
+            
+            <ul id="todoList" class="todo-list">
+                <!-- Zadania będą dodawane dynamicznie -->
+            </ul>
+            
+            <!-- Empty state -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div class="empty-icon">📝</div>
+                <h3>Brak zadań</h3>
+                <p>Dodaj swoje pierwsze zadanie powyżej</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
